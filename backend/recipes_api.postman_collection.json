@@ -1,0 +1,103 @@
+{
+  "info": {
+    "name": "Recipes API",
+    "_postman_id": "d12345-6789-abcdef",
+    "description": "Collection to test Recipes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Recipes (Paginated & Sorted)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes?page=1&limit=5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "5" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search by Title",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/search?title=pie",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "search"],
+          "query": [{ "key": "title", "value": "pie" }]
+        }
+      }
+    },
+    {
+      "name": "Search by Cuisine",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/search?cuisine=Southern Recipes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "search"],
+          "query": [{ "key": "cuisine", "value": "Southern Recipes" }]
+        }
+      }
+    },
+    {
+      "name": "Search by Rating >= 4.5",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/search?rating=>=4.5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "search"],
+          "query": [{ "key": "rating", "value": ">=4.5" }]
+        }
+      }
+    },
+    {
+      "name": "Search by Total Time <= 120",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/search?total_time=<=120",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "search"],
+          "query": [{ "key": "total_time", "value": "<=120" }]
+        }
+      }
+    },
+    {
+      "name": "Search No Results (Fallback)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/search?title=nonexistentfood",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "search"],
+          "query": [{ "key": "title", "value": "nonexistentfood" }]
+        }
+      }
+    }
+  ]
+}
