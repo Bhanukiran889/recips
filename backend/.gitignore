@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+.cache/
+.next/
+out/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# MongoDB local database dump
+dump/
+
+# Coverage
+coverage/
+*.lcov
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
+
+# Optional lock files (keep only one based on your package manager)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
