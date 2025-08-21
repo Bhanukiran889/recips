@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getRecipes, searchRecipes } from "../api"; // using API functions
 import RecipeDrawer from "./RecipeDrawer";
 import Filters from "./Filters";
-import StarRating from "./starRating";
+import StarRating from "./StarRating";
 
 const RecipesTable = () => {
   const [recipes, setRecipes] = useState([]);
